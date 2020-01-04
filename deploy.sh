@@ -1,5 +1,5 @@
 docker build -t skmami/multi-client:latest -t skmami/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t skmami/multi-server:latest -t -t skmami/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t skmami/multi-server:latest -t skmami/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t skmami/multi-worker:latest -t skmami/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push skmami/multi-client:latest
 docker push skmami/multi-server:latest
