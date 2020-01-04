@@ -16,7 +16,7 @@ before_install:
     - gcloud container clusters get-credentials multi-cluster
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
     - docker build -t skmami/react-test -f ./client/Dockerfile.dev ./client
-scripts: 
+script: 
     - docker run -e CI=true skmami/react-test npm run test
 
 deploy: 
